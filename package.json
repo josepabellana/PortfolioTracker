@@ -2,6 +2,9 @@
   "name": "PortfolioTracker",
   "version": "1.0.0",
   "main": "index.js",
+  "scripts": {
+    "commit": "git add . && git commit -m 'x' && git push"
+  },
   "repository": "https://github.com/josepabellana/PortfolioTracker.git",
   "author": "josepabellana <josep.abe.pu@gmail.com>",
   "license": "MIT"
