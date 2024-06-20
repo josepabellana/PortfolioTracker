@@ -26,7 +26,11 @@ const ButtonsComponent: Component<ButtonsProps> = (props: ButtonsProps) => {
 
     function handleOnClickAddNode(event: any) {
         event.stopPropagation();
-        if (numberInputs() > 4 || numberInputs() < 0 || numberOutputs() > 4 || numberOutputs() < 0) return;
+        if (numberInputs() > 4 || numberInputs() < 0 || numberOutputs() > 4 || numberOutputs() < 0 || (numberInputs() === 0 && numberOutputs() === 0)) {
+            
+            alert('Number of inputs or outputs are not correct');
+            return;
+        };
 
         setIsOpen(false);
         props.onClickAdd(numberInputs(),numberOutputs());
